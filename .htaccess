@@ -1,0 +1,17 @@
+# Set environment (dev / prod)
+SetEnv APPLICATION_ENV "prod"
+
+################################################################################
+# Based on: https://codex.wordpress.org/htaccess
+################################################################################
+
+RewriteEngine On
+RewriteBase /
+
+# Hide "index.php" when displaying the homepage
+RewriteRule ^index\.php$ - [L]
+
+# Send all other requests to the homepage if they don't match a file or directory
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule . /index.php [L]
