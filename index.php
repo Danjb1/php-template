@@ -8,8 +8,8 @@ namespace myWebsite;
      */
     
     # Include required files
-    require_once($_SERVER['DOCUMENT_ROOT'] . '/include/variables.php');
-    require_once(INCLUDE_DIR . 'controller.php');
+    require_once $_SERVER['DOCUMENT_ROOT'] . '/include/variables.php';
+    require_once INCLUDE_DIR . 'controller.php';
     
     // Construct page
     $controller = new FrontController();
